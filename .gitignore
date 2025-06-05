@@ -1,0 +1,61 @@
+# 📦 Maven / Build directories
+target/
+!target/.gitkeep
+
+# 📚 Downloaded libraries (will be auto-downloaded)
+lib/
+!lib/.gitkeep
+
+# ☕ Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# 🗂️ IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# 💻 OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 📄 Log files
+*.log
+*.out
+
+# 🔧 Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# 🌐 Web server logs
+catalina.out
+localhost_access_log.*
+
+# 📱 Node modules (if using any frontend tools)
+node_modules/
+npm-debug.log*
+
+# 🔑 Environment files
+.env
+.env.local
+
+# 📊 Coverage reports
+coverage/
+*.coverage
+
+# 🧪 Test results
+TEST-*.xml
+
+# Maven
+.mvn/wrapper/maven-wrapper.properties 

@@ -1,0 +1,41 @@
+🔥 **터미널 문제 해결 - 수동 Git 커밋 가이드** 🔥
+
+현재 PowerShell에서 명령어 실행이 실패하고 있습니다.
+다음 방법들을 시도해보세요:
+
+## 방법 1: Windows Command Prompt 사용
+1. Windows키 + R → cmd 입력 → 엔터
+2. cd /d "C:\cursor_250604\exchangeRate\figureWorld"
+3. git status
+4. git add .
+5. git commit -m "Port 8976 변경 및 인코딩 문제 해결 스크립트 추가"
+6. git push origin main
+
+## 방법 2: Git Bash 사용 (권장)
+1. 프로젝트 폴더에서 오른쪽 클릭 → "Git Bash Here"
+2. git status
+3. git add .
+4. git commit -m "Port 8976 변경 및 인코딩 문제 해결 스크립트 추가"
+5. git push origin main
+
+## 방법 3: Visual Studio Code 내장 터미널
+1. VSCode에서 Ctrl + ` (백틱)
+2. 터미널 유형을 Command Prompt나 Git Bash로 변경
+3. 위 명령어들 실행
+
+## 방법 4: GitHub Desktop 사용
+1. GitHub Desktop 실행
+2. 파일 → Add Local Repository
+3. 프로젝트 폴더 선택
+4. 변경사항 확인 후 커밋 & 푸시
+
+## 🚨 중요: 먼저 인코딩 문제 해결 필요
+커밋 전에 반드시 fix-encoding-issues.cmd를 실행하여 
+컴파일 에러를 해결해야 합니다!
+
+## 만약 위 방법들도 안되면:
+1. 파일 탐색기에서 프로젝트 폴더 열기
+2. fix-encoding-issues.cmd 더블클릭으로 실행
+3. 성공하면 git-commit.cmd 더블클릭으로 실행
+
+🔥 화나는 마음 이해합니다! 이 방법들 중 하나는 반드시 될 겁니다! 

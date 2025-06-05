@@ -1,0 +1,140 @@
+/* ==========================================================================
+   환율 페이지 전용 스타일 (Exchange Rates Specific Styles)
+   - exchange_rates.jsp 페이지에서만 사용하는 특화 스타일
+   - 공통 스타일(common.css)을 기반으로 함
+   ========================================================================== */
+
+/* 환율 정보 레이아웃 */
+.rate-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.rate-info div {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin: 10px;
+    min-width: 200px;
+    text-align: left;
+}
+
+.rate-info strong {
+    color: #2980b9;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rate-info span {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.rate-info .currency-unit {
+    font-size: 0.8em;
+    color: #7f8c8d;
+    margin-left: 5px;
+}
+
+/* 환율 비교 및 예측 스타일 */
+.comparison {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f6fd;
+    border: 1px dashed #3498db;
+    border-radius: 6px;
+}
+
+.comparison h3 {
+    color: #2980b9;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.comparison p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.comparison .prediction-up {
+    color: #27ae60; /* Green for upward trend */
+    font-weight: bold;
+}
+
+.comparison .prediction-down {
+    color: #c0392b; /* Red for downward trend */
+    font-weight: bold;
+}
+
+.comparison .prediction-stable {
+    color: #2c3e50; /* Neutral for stable */
+    font-weight: bold;
+}
+
+/* 최근 업데이트 시간 스타일 */
+.last-updated {
+    font-size: 0.8em;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* 통화 국기 아이콘 정렬 */
+.currency-section h2 img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* JSP Expression Language (EL) placeholders - will be replaced by server-side data */
+.data-placeholder {
+    color: #e74c3c; /* Highlight placeholder data */
+    font-style: italic;
+}
+
+/* 환율 변동 표시 애니메이션 */
+.rate-change {
+    transition: all 0.3s ease;
+}
+
+.rate-change.positive {
+    animation: flash-green 1s ease-in-out;
+}
+
+.rate-change.negative {
+    animation: flash-red 1s ease-in-out;
+}
+
+@keyframes flash-green {
+    0% { background-color: transparent; }
+    50% { background-color: rgba(39, 174, 96, 0.2); }
+    100% { background-color: transparent; }
+}
+
+@keyframes flash-red {
+    0% { background-color: transparent; }
+    50% { background-color: rgba(192, 57, 43, 0.2); }
+    100% { background-color: transparent; }
+}
+
+/* 반응형 디자인 - 환율 페이지 특화 */
+@media (max-width: 768px) {
+    .rate-info {
+        flex-direction: column;
+    }
+    
+    .rate-info div {
+        min-width: auto;
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .currency-section h2 {
+        font-size: 1.2em;
+    }
+} 

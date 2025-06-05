@@ -1,0 +1,255 @@
+/* ==========================================================================
+   공통 스타일 (Common Styles)
+   - 모든 페이지에서 공통으로 사용하는 기본 스타일
+   - 레이아웃, 색상, 폰트 등의 공통 디자인 시스템
+   ========================================================================== */
+
+/* 기본 리셋 및 레이아웃 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 공통 컨테이너 */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.content-container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* 공통 헤더 스타일 */
+.page-header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.page-header p {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+}
+
+/* 공통 섹션 스타일 */
+.content-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.content-section h2 {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* 공통 버튼 스타일 */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.btn-success {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #219a52;
+}
+
+.btn-danger {
+    background-color: #c0392b;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #a93226;
+}
+
+/* 공통 카드 스타일 */
+.info-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin: 10px;
+    text-align: left;
+}
+
+.info-card strong {
+    color: #2980b9;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 공통 상태 표시 스타일 */
+.status-up {
+    color: #27ae60; /* Green for positive/up */
+    font-weight: bold;
+}
+
+.status-down {
+    color: #c0392b; /* Red for negative/down */
+    font-weight: bold;
+}
+
+.status-stable {
+    color: #2c3e50; /* Neutral for stable */
+    font-weight: bold;
+}
+
+.status-warning {
+    color: #f39c12; /* Orange for warning */
+    font-weight: bold;
+}
+
+/* 공통 텍스트 스타일 */
+.text-muted {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+.text-small {
+    font-size: 0.8em;
+}
+
+.text-large {
+    font-size: 1.2em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* 공통 유틸리티 클래스 */
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+
+.p-10 { padding: 10px; }
+.p-15 { padding: 15px; }
+.p-20 { padding: 20px; }
+
+/* 공통 푸터 스타일 */
+.page-footer {
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #95a5a6;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5em;
+    }
+    
+    .content-section {
+        padding: 15px;
+    }
+}
+
+/* 공통 알림/메시지 스타일 */
+.alert {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.alert-info {
+    background-color: #e8f6fd;
+    border-color: #3498db;
+    color: #2980b9;
+}
+
+.alert-success {
+    background-color: #d5f4e6;
+    border-color: #27ae60;
+    color: #219a52;
+}
+
+.alert-warning {
+    background-color: #fef5e7;
+    border-color: #f39c12;
+    color: #d68910;
+}
+
+.alert-danger {
+    background-color: #fadbd8;
+    border-color: #c0392b;
+    color: #a93226;
+} 

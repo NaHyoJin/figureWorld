@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Exchange Rate Information System</display-name>
+    <description>실시간 환율 정보 시스템</description>
+
+    <!-- 환율 컨트롤러 서블릿 -->
+    <servlet>
+        <servlet-name>ExchangeRateController</servlet-name>
+        <servlet-class>kr.co.exchangeRate.controller.ExchangeRateController</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ExchangeRateController</servlet-name>
+        <url-pattern>/exchangeRates.do</url-pattern>
+    </servlet-mapping>
+
+    <!-- 인덱스 페이지 설정 -->
+    <welcome-file-list>
+        <welcome-file>exchangeRates.do</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- 인코딩은 서블릿에서 직접 처리 -->
+
+    <!-- 에러 페이지 설정 -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error/500.jsp</location>
+    </error-page>
+
+    <!-- 세션 타임아웃 설정 (30분) -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+</web-app> 

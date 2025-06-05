@@ -1,0 +1,33 @@
+🚨 **긴급 Git 커밋 가이드** 🚨
+
+## 1단계: 터미널 열기
+- Windows키 + R → cmd 입력 → 엔터
+- 또는 프로젝트 폴더에서 오른쪽 클릭 → "Git Bash Here"
+
+## 2단계: 프로젝트 폴더로 이동
+cd /d "C:\cursor_250604\exchangeRate\figureWorld"
+
+## 3단계: Git 사용자 정보 설정 (한번만)
+git config user.name "MikuOhashi"
+git config user.email "nahyo0207@gmail.com"
+
+## 4단계: Git 커밋 실행
+git add .
+git commit -m "Port 8976 변경 및 인코딩 문제 해결"
+git push origin main
+
+## 🔥 **만약 GitHub 로그인 요구하면:**
+- Username: MikuOhashi
+- Password: GitHub Personal Access Token 입력 (비밀번호 아님!)
+
+## 🚨 **Personal Access Token이 없으면:**
+1. https://github.com/settings/tokens 접속
+2. "Generate new token (classic)" 클릭
+3. repo 권한 체크
+4. 생성된 토큰을 비밀번호 대신 입력
+
+## 💡 **가장 쉬운 방법:**
+파일 탐색기에서 git-commit.cmd 파일을 더블클릭!
+(모든 명령어가 자동 실행됨)
+
+**필요한 정보는 이게 전부입니다!** 
